@@ -24,7 +24,7 @@ export default function Navbar() {
   const staggerDelays = ["yh-delay-1", "yh-delay-2", "yh-delay-3"];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-neutral-950/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-blue-950/90 backdrop-blur-md">
       <nav className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Logo variant="onDark" href="/" />
 
@@ -69,7 +69,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`border-t border-white/[0.08] bg-neutral-950/95 backdrop-blur-md md:hidden ${
+        className={`border-t border-white/[0.08] bg-blue-500/95 backdrop-blur-md md:hidden ${
           open ? "max-h-96 opacity-100" : "max-h-0 overflow-hidden opacity-0"
         } transition-all duration-300 ease-out`}
       >

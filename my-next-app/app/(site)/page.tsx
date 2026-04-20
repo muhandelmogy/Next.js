@@ -5,7 +5,7 @@ export default function HomePage() {
     <section className="relative flex min-h-[calc(100vh-4.25rem)] items-center justify-center overflow-hidden bg-neutral-950 px-4">
       {/* Animated gradient bg */}
       <div
-        className="pointer-events-none absolute inset-0 yh-hero-shine bg-gradient-to-br from-red-950/25 via-neutral-950 to-black"
+        className="pointer-events-none absolute inset-0 bg-amber-300"
         aria-hidden
       />
       {/* Glow blobs */}
@@ -16,7 +16,7 @@ export default function HomePage() {
       <div className="relative z-10 mx-auto max-w-2xl text-center">
         <h1 className="yh-animate-up yh-delay-1 mt-6 text-4xl font-black tracking-tight text-white sm:text-6xl">
           Discover products{" "}
-          <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
             you'll love.
           </span>
         </h1>
@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="yh-animate-up yh-delay-3 mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-red-900/40 transition duration-200 hover:-translate-y-0.5 hover:bg-red-500 hover:shadow-red-800/50"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/40 transition duration-200 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-blue-800/50"
           >
             Shop now
             <span aria-hidden>→</span>

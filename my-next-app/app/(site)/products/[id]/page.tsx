@@ -100,7 +100,7 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <div className="flex min-h-[50vh] flex-col items-center justify-center gap-4 bg-neutral-950 px-4">
-        <span className="h-10 w-10 animate-spin rounded-full border-2 border-white/10 border-t-red-500" />
+        <span className="h-10 w-10 animate-spin rounded-full border-2 border-white/10 border-t-blue-500" />
         <p className="text-sm font-medium text-neutral-500">Loading…</p>
       </div>
     );
@@ -117,7 +117,7 @@ export default function ProductDetailPage() {
           </p>
           <Link
             href="/products"
-            className="mt-6 inline-block rounded-lg bg-red-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-red-500"
+            className="mt-6 inline-block rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-500"
           >
             All products
           </Link>
@@ -132,13 +132,13 @@ export default function ProductDetailPage() {
         <button
           type="button"
           onClick={() => router.back()}
-          className="yh-animate-up mb-8 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-neutral-300 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
+          className="yh-animate-up mb-8 rounded-lg border border-white/10 bg-blue-500/5 px-4 py-2 text-sm font-semibold text-neutral-300 transition hover:border-white/20 hover:bg-white/10 hover:text-white"
         >
           ← Back
         </button>
 
         {isSessionOnly && (
-          <div className="mb-6 rounded-xl border border-red-500/20 bg-red-950/20 px-4 py-3 text-sm text-neutral-300">
+          <div className="mb-6 rounded-xl border border-blue-500/20 bg-blue-950/20 px-4 py-3 text-sm text-neutral-300">
             <strong className="text-red-400">Session-only product.</strong> DummyJSON
             does not expose this id on GET after create — you&apos;re seeing the
             copy saved in your browser. Edit/Update on the server is disabled.

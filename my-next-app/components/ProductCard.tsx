@@ -8,8 +8,8 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 shadow-md transition duration-300 ease-out hover:-translate-y-1 hover:border-neutral-600 hover:shadow-xl hover:shadow-black/40">
-      <div className="relative overflow-hidden bg-neutral-800">
+    <article className="group relative overflow-hidden rounded-2xl border border-blue-500 bg-neutral-900 shadow-md transition duration-300 ease-out hover:-translate-y-1 hover:border-neutral-600 hover:shadow-xl hover:shadow-black/40">
+      <div className="relative overflow-hidden bg-blue-500">
         <Image
           src={product.thumbnail}
           alt={product.title}

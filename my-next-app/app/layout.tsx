@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* BUG FIX: was bg-white text-neutral-950 — clashed with dark pages (404, 500) */}
-      <body className="flex min-h-screen flex-col bg-neutral-950 font-sans text-white antialiased">
+      <body className="flex min-h-screen flex-col bg-green-500 font-sans text-white antialiased">
         {children}
       </body>
     </html>

@@ -88,7 +88,7 @@ function ProductsView() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-950">
+    <div className="min-h-screen bg-blue-950">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -115,7 +115,7 @@ function ProductsView() {
             id="filter-category"
             value={selectedCategory}
             onChange={(e) => setQuery("category", e.target.value)}
-            className="rounded-lg border border-white/10 bg-neutral-900 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition hover:border-white/20 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+            className="rounded-lg border border-white/10 bg-blue-900 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition hover:border-white/20 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           >
             <option value="">All categories</option>
             {categories.map((c) => (

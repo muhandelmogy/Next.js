@@ -10,7 +10,7 @@ export default function ErrorPage({
   reset: () => void;
 }) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center gap-6 bg-neutral-950 px-4 py-16 text-center">
+    <div className="relative flex min-h-screen flex-col items-center justify-center gap-6 bg-amber-500 px-4 py-16 text-center">
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(127,29,29,0.15),_transparent_60%)]"
         aria-hidden

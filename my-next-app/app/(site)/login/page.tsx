@@ -32,7 +32,7 @@ export default function LoginPage() {
             placeholder="Email"
             required
             autoComplete="email"
-            className="rounded-lg border border-white/10 bg-neutral-800 px-4 py-3 text-white outline-none transition placeholder:text-neutral-500 focus:border-red-500/60 focus:ring-2 focus:ring-red-500/20"
+            className="rounded-lg border border-white/10 bg-blue-500/5 px-4 py-3 text-white outline-none transition placeholder:text-neutral-500 focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/20"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
@@ -41,13 +41,13 @@ export default function LoginPage() {
             placeholder="Password"
             required
             autoComplete="current-password"
-            className="rounded-lg border border-white/10 bg-neutral-800 px-4 py-3 text-white outline-none transition placeholder:text-neutral-500 focus:border-red-500/60 focus:ring-2 focus:ring-red-500/20"
+            className="rounded-lg border border-white/10 bg-blue-500/5 px-4 py-3 text-white outline-none transition placeholder:text-neutral-500 focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/20"
             value={form.password}
             onChange={(e) => setForm({ ...form, password: e.target.value })}
           />
           <button
             type="submit"
-            className="mt-2 w-full rounded-lg bg-red-600 py-3 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition hover:bg-red-500"
+            className="mt-2 w-full rounded-lg bg-blue-600 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-blue-500"
           >
             Sign in
           </button>

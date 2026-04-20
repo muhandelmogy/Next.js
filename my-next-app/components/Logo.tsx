@@ -21,7 +21,7 @@ export default function Logo({
   const content = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
       <span
-        className={`relative grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-red-950 shadow-lg ring-1 ${markRing} transition duration-300 ease-out will-change-transform group-hover:scale-[1.03] group-hover:shadow-red-950/40`}
+        className={`relative grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-blue-500 shadow-lg ring-1 ${markRing} transition duration-300 ease-out will-change-transform group-hover:scale-[1.03] group-hover:shadow-blue-500/40`}
         aria-hidden
       >
         <span className="absolute inset-x-2 top-2 h-px bg-white/25" />
