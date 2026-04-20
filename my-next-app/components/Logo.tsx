@@ -14,38 +14,44 @@ export default function Logo({
   className = "",
 }: LogoProps) {
   const isDark = variant === "onDark";
-  const wordClass = isDark ? "text-white" : "text-neutral-950";
-  const subClass = "text-neutral-500";
-  const markRing = isDark ? "ring-white/20" : "ring-neutral-950/15";
+  const nameClass = isDark ? "text-white" : "text-zinc-950";
+  const tagClass = isDark ? "text-emerald-400" : "text-emerald-600";
 
   const content = (
     <span className={`inline-flex items-center gap-3 ${className}`}>
+      {/* Hexagonal mark */}
       <span
-        className={`relative grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-blue-500 shadow-lg ring-1 ${markRing} transition duration-300 ease-out will-change-transform group-hover:scale-[1.03] group-hover:shadow-blue-500/40`}
+        className="relative grid h-9 w-9 shrink-0 place-items-center transition duration-300 group-hover:scale-105"
         aria-hidden
       >
-        <span className="absolute inset-x-2 top-2 h-px bg-white/25" />
-        <span className="font-black text-sm leading-none tracking-tight text-white">
-          ME
+        <svg viewBox="0 0 36 36" fill="none" className="absolute inset-0 h-full w-full">
+          <path
+            d="M18 2 L32 10 L32 26 L18 34 L4 26 L4 10 Z"
+            fill="rgba(52,211,153,0.12)"
+            stroke="#34d399"
+            strokeWidth="1.5"
+          />
+        </svg>
+        <span className="relative text-[0.6rem] font-black tracking-widest text-emerald-400">
+          GR
         </span>
-        <span className="absolute bottom-2 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-white/60" />
       </span>
+
       {showWordmark && (
-        <span className="flex min-w-0 flex-col text-left leading-none">
-          <span
-            className={`mt-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.38em] ${subClass}`}
-          >
-            Store
+        <span className="flex flex-col leading-none">
+          <span className={`text-sm font-black tracking-[0.15em] uppercase ${nameClass}`}>
+            Grove
+          </span>
+          <span className={`text-[0.55rem] font-semibold uppercase tracking-[0.3em] ${tagClass}`}>
+            Market
           </span>
         </span>
       )}
     </span>
   );
 
-  const ringOffset = isDark
-    ? "focus-visible:ring-offset-neutral-950"
-    : "focus-visible:ring-offset-white";
-  const wrapClass = `group inline-flex rounded-lg outline-none transition focus-visible:ring-2 focus-visible:ring-red-950/50 focus-visible:ring-offset-2 ${ringOffset}`;
+  const wrapClass =
+    "group inline-flex rounded-lg outline-none transition focus-visible:ring-2 focus-visible:ring-emerald-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950";
 
   if (href) {
     return (
@@ -55,5 +61,5 @@ export default function Logo({
     );
   }
 
-  return <span className={`group inline-flex ${wrapClass}`}>{content}</span>;
+  return <span className={`group ${wrapClass}`}>{content}</span>;
 }

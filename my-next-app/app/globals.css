@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+/* ── Custom properties ── */
+:root {
+  --accent: #34d399;        /* emerald-400  */
+  --accent-dim: #10b981;    /* emerald-500  */
+  --accent-glow: rgba(52, 211, 153, 0.18);
+  --surface: #0f0f0f;
+  --surface-raised: #1a1a1a;
+  --border: rgba(255,255,255,0.07);
+}
+
+/* ── Keyframes ── */
 @keyframes yh-fade-up {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -15,9 +26,20 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes yh-pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  50%       { box-shadow: 0 0 24px 6px var(--accent-glow); }
+}
+
+@keyframes yh-scan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* ── Utility classes ── */
 @layer utilities {
   .yh-animate-up {
-    animation: yh-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: yh-fade-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     opacity: 0;
   }
 
@@ -27,13 +49,32 @@
   }
 
   .yh-delay-1 { animation-delay: 80ms; }
-  .yh-delay-2 { animation-delay: 160ms; }
-  .yh-delay-3 { animation-delay: 240ms; }
-  .yh-delay-4 { animation-delay: 320ms; }
+  .yh-delay-2 { animation-delay: 170ms; }
+  .yh-delay-3 { animation-delay: 260ms; }
+  .yh-delay-4 { animation-delay: 350ms; }
 
   .yh-hero-shine {
     background-size: 200% 100%;
-    animation: yh-shimmer 12s ease-in-out infinite alternate;
+    animation: yh-shimmer 10s ease-in-out infinite alternate;
+  }
+
+  .yh-glow-pulse {
+    animation: yh-pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Scanline texture overlay */
+  .yh-scanlines::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
   }
 }
 
@@ -44,7 +85,8 @@
     opacity: 1 !important;
     transform: none !important;
   }
-  .yh-hero-shine {
+  .yh-hero-shine,
+  .yh-glow-pulse {
     animation: none !important;
   }
 }

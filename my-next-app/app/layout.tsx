@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ME Store",
-  description: "Your favorite online store",
+  title: "GROVE — Shop with intention",
+  description: "Curated goods for people with taste.",
 };
 
 export default function RootLayout({
@@ -13,8 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* BUG FIX: was bg-white text-neutral-950 — clashed with dark pages (404, 500) */}
-      <body className="flex min-h-screen flex-col bg-green-500 font-sans text-white antialiased">
+      <body className="flex min-h-screen flex-col bg-[#0f0f0f] font-sans text-white antialiased">
         {children}
       </body>
     </html>
